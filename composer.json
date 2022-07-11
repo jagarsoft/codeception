@@ -1,0 +1,35 @@
+{
+    "name": "jagarsoft/codeception",
+    "description": "Testing TAUonDDD project REST API with codeception",
+    "type": "project",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Javier Garrido",
+            "email": "jagarsoft2000@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "config": {
+      "optimize-autoloader": true
+    },
+     "require-dev": {
+        "codeception/codeception": "^4.2",
+        "codeception/module-rest": "^1.0.0",
+        "codeception/module-phpbrowser": "^1.0.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "ProyectoTAU\\": "tau-on-ddd/src/"
+      },
+        "files": [
+            "tau-on-ddd/src/TAU/Common/helpers.php"
+        ]
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "ProyectoTAU\\TAU\\Common\\ComposerScripts::postAutoloadDump"
+        ]
+     }
+}
